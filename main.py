@@ -24,6 +24,22 @@ def createfile():
     except Exception as err:
         print(f"this file already exist")
 
+def readfile():
+    try:
+        readfileandfolder()
+        name = input("which file you want to read")
+        p = Path(name)
+        if p.exists() and p.is_file():
+            with open(p, 'r') as fs:
+                data = fs.read()
+                print(data)
+
+                print("Readed successfully")
+        else:
+            print("the file doesnot exist")
+    except Exception as err:
+        print(f"An error occured as {err}")
+
 print("press 1 for creating a file")
 print("press 2 for reading a file")
 print("press 3 for updating a file")
