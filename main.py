@@ -49,6 +49,11 @@ print("press 4 for deletion a file")
 
 check = int(input("please tell your response :- "))
 
-if check == 1;
-    createFile()
+if check == 1:
+    createfile()
 
+if check == 2:
+    readfile()
+
+if check == 3:
+    updatefile()
