@@ -40,7 +40,37 @@ def readfile():
     except Exception as err:
         print(f"An error occured as {err}")
 
+def updatefile():
+    try:
+        readfileandfolder()
+        name = input("tell which file you want to update :- ")
+        p = Path(name)
+        if p.exists() and p.is_file():
+            print("press 1 for changing the name of your file :- ")
+            print("press 2 for overwriting the data of your file :- ")
+            print("press 3 for appending some content in your file :-")
 
+            res = int(input("tell your response :- "))
+
+            if res == 1:
+                name2 = input("tell your new file name :- ")
+                p2 = Path(namw2)
+                p.rename(p2)
+
+            if res == 2:
+                with open(p, 'w') as fs:
+                    data = input("tell what you want to write this is overwrite the data :- ")
+                    fs.write(data)
+
+            if res == 3:
+                with open(p, 'a') as fs:
+                    data = input("tell what you want to append :- ")
+                    fs.writable(""+data)
+
+    except Exception as err: 
+        print("an error occured as {err}")
+
+        
 
 print("press 1 for creating a file")
 print("press 2 for reading a file")
