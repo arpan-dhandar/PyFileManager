@@ -70,7 +70,24 @@ def updatefile():
     except Exception as err: 
         print("an error occured as {err}")
 
-def       
+def deletefile():
+   try:
+     readfileandfolder()
+        name = input("which file you want to delete :-")    
+        p = Path(name)
+    
+        if p.exists() and p.is_file():
+            os.remove(name)
+    
+            print("file removes successfully")
+    
+        else:
+            print("No such file exist")
+    
+    except Exception as err:
+        print(f"An error occured as {err}")
+
+
 
 print("press 1 for creating a file")
 print("press 2 for reading a file")
