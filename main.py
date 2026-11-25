@@ -54,7 +54,7 @@ def updatefile():
 
             if res == 1:
                 name2 = input("tell your new file name :- ")
-                p2 = Path(namw2)
+                p2 = Path(name2)
                 p.rename(p2)
 
             if res == 2:
@@ -70,7 +70,7 @@ def updatefile():
     except Exception as err: 
         print("an error occured as {err}")
 
-        
+def       
 
 print("press 1 for creating a file")
 print("press 2 for reading a file")
@@ -87,3 +87,6 @@ if check == 2:
 
 if check == 3:
     updatefile()
+
+if check == 4:
+    deletefile()
